@@ -15,14 +15,9 @@ export default function ConvertDate(date: DateProps) {
     let millenium = yearArray[0];
     let yearNum = yearArray[1 - 3];
     const imperialDate = [];
-    if (millenium === "1") {
-        imperialDate.push(".M2")
-    } else if (millenium === "2") {
-        imperialDate.push(".M3")
-    }
-    imperialDate.unshift(yearNum)
-    return 
-        <>
-          
-        </>
-    }
+    imperialDate.push(`${yearNum}.M${millenium+1}`);
+    return (
+        <div>
+            {imperialDate.toString()}
+        </div>
+    )};
